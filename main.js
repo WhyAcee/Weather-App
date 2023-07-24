@@ -116,7 +116,7 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n\n\nconsole.log('hello world');\n\n\n//# sourceURL=webpack://weather-app/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n\n\nconst searchBar = document.getElementById('search-bar');\nconst submitBtn = document.getElementById('submit-btn');\nconst key = '77c6d40a83274e6ab4b144221231907';\nlet location = 'toronto';\n\nasync function fetchCurrentWeather(city) {\n  try {\n    const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=${key}&q=${city}&aqi=no`, { mode: 'cors' });\n    const weather = await response.json();\n    console.log(weather.current.temp_c);\n    console.log(`Feels like: ${weather.current.feelslike_c}`);\n    console.log(`${weather.location.name}, ${weather.location.country}`);\n    console.log(weather.current.condition.text);\n  } catch (error) {\n    console.log(error);\n  }\n}\n\nsubmitBtn.addEventListener('click', (event) => {\n  event.preventDefault();\n  location = searchBar.value;\n  fetchCurrentWeather(location);\n});\n\nfetchCurrentWeather(location);\n\n\n//# sourceURL=webpack://weather-app/./src/index.js?");
 
 /***/ })
 
