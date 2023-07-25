@@ -6,9 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
     <script src="main.js" defer></script>
-    <link href="https://fonts.googleapis.com/css2?family=Monomaniac+One&family=Roboto+Flex:wght@600&display=swap" rel="stylesheet">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Flex:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,0" />
 </head>
 <body>
     <div class="header">
@@ -21,8 +24,18 @@
                 <span class="material-symbols-outlined">search</span>
             </button>
         </form>
-        
     </div>
-    <div class="content"></div>
+    <div class="content">
+        <div class="info">
+            <p class="condition">sunny</p>
+            <h1 class="location">Toronto, Canada</h1>
+            <span class="temp">45</span>
+        </div>
+        <div class="extra-info">
+            <p class="feels-like">FEELS LIKE: 70</p>
+            <p class="humidity">HUMIDITY: 69</p>
+            <p class="visibility">Visibility: 16km</p>
+        </div>
+    </div>
 </body>
 </html>
