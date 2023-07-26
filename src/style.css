@@ -100,5 +100,11 @@ form button {
     padding-left: 20px;
 }
 
+.feels-like::after {
+    content: '°C';
+    font-size: 0.8rem;
+    position: absolute;
+    top: 0.2rem;
+}
 
 
