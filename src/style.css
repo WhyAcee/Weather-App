@@ -17,7 +17,9 @@ body {
 
 .header {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     padding: 10px;
 }
  
@@ -54,6 +56,13 @@ form button {
     cursor: pointer;
     border-bottom-right-radius: 20px;
     border-top-right-radius: 20px;
+}
+
+.error-msg {
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+    color: rgb(120, 0, 0);
+    display: none;
 }
 
 .content {
@@ -106,5 +115,3 @@ form button {
     position: absolute;
     top: 0.2rem;
 }
-
-

@@ -4,6 +4,7 @@ const searchBar = document.getElementById('search-bar');
 const submitBtn = document.getElementById('submit-btn');
 const key = '77c6d40a83274e6ab4b144221231907';
 let location = 'toronto';
+const errorMsg = document.querySelector('.error-msg');
 
 function updateWeather(weather) {
   const conditionElement = document.querySelector('.condition');
@@ -27,8 +28,9 @@ async function fetchCurrentWeather(city) {
     const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=${key}&q=${city}&aqi=no`, { mode: 'cors' });
     const weather = await response.json();
     updateWeather(weather);
+    errorMsg.style.display = 'none';
   } catch (error) {
-    console.log(error);
+    errorMsg.style.display = 'block';
   }
 }
 
